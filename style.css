@@ -302,4 +302,128 @@
       font-size: 1.3rem;
     }
 
+    /* ===== PRODUCTS ===== */
+    .products-section {
+      padding: 80px 0;
+      background: var(--cream);
+    }
+
+    .product-card {
+      background: white;
+      border-radius: 24px;
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+      transition: 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+      height: 100%;
+      position: relative;
+    }
+
+    .product-card:hover {
+      transform: translateY(-12px);
+      box-shadow: 0 20px 50px rgba(180, 95, 58, 0.15);
+    }
+
+    .product-card .product-image {
+      height: 240px;
+      overflow: hidden;
+      position: relative;
+      background: #f8f0e8;
+    }
+
+    .product-card .product-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.6s ease;
+    }
+
+    .product-card:hover .product-image img {
+      transform: scale(1.08);
+    }
+
+    .product-card .product-badge {
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      background: var(--primary);
+      color: white;
+      padding: 5px 16px;
+      border-radius: 30px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      box-shadow: 0 4px 15px rgba(180, 95, 58, 0.3);
+      z-index: 2;
+    }
+
+    .product-card .product-badge.sold-out {
+      background: #dc3545;
+    }
+
+    .product-card .card-body {
+      padding: 20px 22px 22px;
+    }
+
+    .product-card .card-title {
+      font-weight: 700;
+      color: var(--secondary);
+      font-size: 1.15rem;
+    }
+
+    .product-card .card-text {
+      color: #6c5a4a;
+      font-size: 0.9rem;
+      margin-bottom: 15px;
+    }
+
+    .product-card .product-footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-top: 15px;
+      border-top: 2px solid #f5ede6;
+    }
+
+    .product-card .product-price {
+      font-weight: 700;
+      font-size: 1.3rem;
+      color: var(--primary);
+    }
+
+    .product-card .product-price .original {
+      font-size: 0.85rem;
+      color: #999;
+      text-decoration: line-through;
+      font-weight: 400;
+      margin-left: 8px;
+    }
+
+    .btn-add-cart {
+      background: var(--primary);
+      color: white;
+      border: none;
+      padding: 8px 20px;
+      border-radius: 50px;
+      font-weight: 600;
+      font-size: 0.9rem;
+      transition: 0.3s;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .btn-add-cart:hover:not(:disabled) {
+      background: var(--primary-dark);
+      transform: scale(1.05);
+      color: white;
+    }
+
+    .btn-add-cart.added {
+      background: #28a745;
+    }
+
+    .btn-add-cart:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
+
     
