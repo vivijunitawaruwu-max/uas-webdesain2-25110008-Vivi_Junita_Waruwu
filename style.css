@@ -614,4 +614,64 @@
       text-align: center;
       font-size: 0.9rem;
     }
+
+    /* ===== TOAST NOTIFICATION ===== */
+    .toast-container {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      z-index: 9999;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .toast-custom {
+      background: white;
+      padding: 16px 24px;
+      border-radius: 16px;
+      box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      animation: slideUp 0.5s ease;
+      border-left: 4px solid var(--primary);
+      min-width: 280px;
+    }
+
+    .toast-custom i {
+      color: var(--primary);
+      font-size: 1.5rem;
+    }
+
+    @keyframes slideUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 768px) {
+      .hero-title {
+        font-size: 2.5rem;
+      }
+      .hero-stats {
+        gap: 20px;
+        flex-wrap: wrap;
+      }
+      .about-features {
+        grid-template-columns: 1fr;
+      }
+      .floating-badge {
+        display: none;
+      }
+      .section-title-wrapper h2 {
+        font-size: 2.2rem;
+      }
+      .contact-form-wrapper {
+        padding: 20px;
+      }
+      .hero-image-wrapper img {
+        height: 300px;
+      }
+    }
     
